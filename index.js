@@ -2,84 +2,8 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const records = [
-    { roll: "25BMS0338" },
-    { roll: "25BMS0344" },
-    { roll: "25BMS0355" },
-    { roll: "25BMS0323" },
-    { roll: "25BMS0311" },
-    { roll: "25BMS0350" },
-    { roll: "25BMS0307" },
-    { roll: "25BMS03" },
-];
-
 // Student data
 const students = [
-    {
-    rollNumber: "25BMS0350",
-    name: "Rashi Sengar",
-    email: "rashi.25bms0338@ddu.du.ac.in",
-    department: "BMS",
-    semester: 1,
-    attan: { total: 249, attended: 109 },
-    internals: { Stats: 58, FA: 64, FOM: 65, remark: "Rishi CR 🐸" },
-    classTest: { Stats: 18, FA: 12, FOM: 31 }
-    },
-  {
-    rollNumber: "25BMS0338",
-    name: "Piyush Barala",
-    email: "piyush.25bms0338@ddu.du.ac.in",
-    department: "BMS",
-    semester: 1,
-    attan: { total: 249, attended: 129 },
-    internals: { Stats: 58, FA: 64, FOM: 65, remark: "He is BATMAN" },
-    classTest: { Stats: 9.5, FA: 99, FOM: 24 }
-  },
-  {
-    rollNumber: "25BMS0311",
-    name: "Ashish Meena",
-    email: "ashish.25bms0311@ddu.du.ac.in",
-    department: "BMS",
-    semester: 1,
-    attan: { total: 249, attended: 69 },
-    internals: { Stats: 13, FA: 21, FOM: 22, remark: "Has much potential but needs improvement" },
-    classTest: { Stats: 15, FA: 12, FOM: 22 }
-  },
-  {
-    rollNumber: "25BMS0344",
-    name: "Priyanshu Jha",
-    email: "priyanshu.25bms0344@ddu.du.ac.in",
-    department: "BMS",
-    semester: 1,
-    attan: { total: 249, attended: 221 },
-    internals: { Stats: 69, FA: 69, FOM: 70, remark: "Never misses a class and is favorite of EVS faculty" },
-    classTest: { Stats: 18.5, FA: 35, FOM: 31 }
-  },
-  {
-    rollNumber: "25BMS0355",
-    name: "Shreyash Kumar",
-    email: "shreyash.25bms0355@ddu.du.ac.in",
-    department: "BMS",
-    semester: 1,
-    attan: { total: 249, attended: 99 },
-    internals: { Stats: 62, FA: 59, FOM: 45, remark: "Best Student" },
-    classTest: { Stats: 12, FA: 23, FOM: 27 }
-  },
-  {
-    rollNumber: "25BMS0307",
-    name: "Anuj Ahirwar",
-    email: "anuj.25bms0307@ddu.du.ac.in",
-    department: "BMS",
-    semester: 1,
-    attan: { total: 249, attended: 189 },
-    internals: { Stats: 12, FA: 29, FOM: 27, remark: "Mischievous but talented student" },
-    classTest: { Stats: 8, FA: 23, FOM: 25 }
-  },
-
-
-
-
-
   {
     rollNumber: "25BMS0301",
     name: "Abdul Sameeh Malik",
@@ -136,9 +60,9 @@ const students = [
     email: "anuj.25bms0307@ddu.du.ac.in",
     department: "BMS",
     semester: 1,
-    attan: { total: 249, attended: 101 },
-    internals: { Stats: 48, FA: 48, FOM: 41, remark: "Has a PhD in 'maybe later' procrastination 🐢" },
-    classTest: { Stats: 14, FA: 12, FOM: 18 }
+    attan: { total: 249, attended: 189 },
+    internals: { Stats: 12, FA: 29, FOM: 27, remark: "Mischievous but talented student" },
+    classTest: { Stats: 8, FA: 23, FOM: 25 }
   },
   {
     rollNumber: "25BMS0308",
@@ -159,6 +83,16 @@ const students = [
     attan: { total: 249, attended: 110 },
     internals: { Stats: 41, FA: 36, FOM: 56, remark: "Always in first row — suspiciously awake 👀" },
     classTest: { Stats: 12, FA: 9, FOM: 25 }
+  },
+  {
+    rollNumber: "25BMS0311",
+    name: "Ashish Meena",
+    email: "ashish.25bms0311@ddu.du.ac.in",
+    department: "BMS",
+    semester: 1,
+    attan: { total: 249, attended: 69 },
+    internals: { Stats: 13, FA: 21, FOM: 22, remark: "Has much potential but needs improvement" },
+    classTest: { Stats: 15, FA: 12, FOM: 22 }
   },
   {
     rollNumber: "25BMS0315",
@@ -301,6 +235,16 @@ const students = [
     classTest: { Stats: 17, FA: 12, FOM: 29 }
   },
   {
+    rollNumber: "25BMS0338",
+    name: "Piyush Barala",
+    email: "piyush.25bms0338@ddu.du.ac.in",
+    department: "BMS",
+    semester: 1,
+    attan: { total: 249, attended: 129 },
+    internals: { Stats: 58, FA: 64, FOM: 65, remark: "He is BATMAN" },
+    classTest: { Stats: 9.5, FA: 99, FOM: 24 }
+  },
+  {
     rollNumber: "25BMS0339",
     name: "Pooja Singh",
     email: "pooja.25bms0339@ddu.du.ac.in",
@@ -351,6 +295,16 @@ const students = [
     classTest: { Stats: 15, FA: 15, FOM: 31 }
   },
   {
+    rollNumber: "25BMS0344",
+    name: "Priyanshu Jha",
+    email: "priyanshu.25bms0344@ddu.du.ac.in",
+    department: "BMS",
+    semester: 1,
+    attan: { total: 249, attended: 221 },
+    internals: { Stats: 69, FA: 69, FOM: 70, remark: "Never misses a class and is favorite of EVS faculty" },
+    classTest: { Stats: 18.5, FA: 35, FOM: 31 }
+  },
+  {
     rollNumber: "25BMS0346",
     name: "Punay Sachdeva",
     email: "punay.25bms0346@ddu.du.ac.in",
@@ -381,6 +335,16 @@ const students = [
     classTest: { Stats: 11, FA: 9, FOM: 18 }
   },
   {
+    rollNumber: "25BMS0350",
+    name: "Rashi Sengar",
+    email: "rashi.25bms0350@ddu.du.ac.in",
+    department: "BMS",
+    semester: 1,
+    attan: { total: 249, attended: 109 },
+    internals: { Stats: 58, FA: 64, FOM: 65, remark: "Rashi CR 🐸" },
+    classTest: { Stats: 18, FA: 12, FOM: 31 }
+  },
+  {
     rollNumber: "25BMS0351",
     name: "Ritika",
     email: "ritika.25bms0351@ddu.du.ac.in",
@@ -409,6 +373,16 @@ const students = [
     attan: { total: 249, attended: 92 },
     internals: { Stats: 50, FA: 48, FOM: 51, remark: "Thinks  ✍️" },
     classTest: { Stats: 15, FA: 12, FOM: 23 }
+  },
+  {
+    rollNumber: "25BMS0355",
+    name: "Shreyash Kumar",
+    email: "shreyash.25bms0355@ddu.du.ac.in",
+    department: "BMS",
+    semester: 1,
+    attan: { total: 249, attended: 99 },
+    internals: { Stats: 62, FA: 59, FOM: 45, remark: "Best Student" },
+    classTest: { Stats: 12, FA: 23, FOM: 27 }
   },
   {
     rollNumber: "25BMS0356",
@@ -499,8 +473,11 @@ const students = [
     attan: { total: 249, attended: 106 },
     internals: { Stats: 45, FA: 53, FOM: 42, remark: "Classroom vibe: 100% energy, 0% pen ✏️" },
     classTest: { Stats: 10, FA: 12, FOM: 23 }
-  },
+  }
 ];
+
+// Auto-generate records from students array
+const records = students.map(student => ({ roll: student.rollNumber }));
 
 // Middleware
 app.use(express.json());
@@ -601,6 +578,6 @@ app.get('/api/health', (req, res) => {
 // Start server
 app.listen(PORT, () => {
   console.log(`Student API running on PORT: ${PORT}`);
+  console.log(`Total students registered: ${students.length}`);
+  console.log(`Total records for login: ${records.length}`);
 });
-
-
