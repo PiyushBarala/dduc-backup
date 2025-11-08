@@ -478,15 +478,53 @@ const students = [
 
 // Auto-generate records from students array
 const records = [
-    { roll: "25BMS0338" },
-    { roll: "25BMS0344" },
-    { roll: "25BMS0355" },
-    { roll: "25BMS0323" },
-    { roll: "25BMS0311" },
-    { roll: "25BMS0350" },
-    { roll: "25BMS0307" },
-    { roll: "25BMS0322" },
-    
+  { roll: "25BMS0301" },
+  { roll: "25BMS0303" },
+  { roll: "25BMS0304" },
+  { roll: "25BMS0305" },
+  { roll: "25BMS0306" },
+  { roll: "25BMS0307" },
+  { roll: "25BMS0308" },
+  { roll: "25BMS0309" },
+  { roll: "25BMS0311" },
+  { roll: "25BMS0315" },
+  { roll: "25BMS0316" },
+  { roll: "25BMS0317" },
+  { roll: "25BMS0318" },
+  { roll: "25BMS0319" },
+  { roll: "25BMS0321" },
+  { roll: "25BMS0322" },
+  { roll: "25BMS0323" },
+  { roll: "25BMS0324" },
+  { roll: "25BMS0325" },
+  { roll: "25BMS0326" },
+  { roll: "25BMS0327" },
+  { roll: "25BMS0328" },
+  { roll: "25BMS0334" },
+  { roll: "25BMS0338" },
+  { roll: "25BMS0339" },
+  { roll: "25BMS0340" },
+  { roll: "25BMS0341" },
+  { roll: "25BMS0342" },
+  { roll: "25BMS0343" },
+  { roll: "25BMS0344" },
+  { roll: "25BMS0346" },
+  { roll: "25BMS0348" },
+  { roll: "25BMS0349" },
+  { roll: "25BMS0350" },
+  { roll: "25BMS0351" },
+  { roll: "25BMS0353" },
+  { roll: "25BMS0354" },
+  { roll: "25BMS0355" },
+  { roll: "25BMS0356" },
+  { roll: "25BMS0359" },
+  { roll: "25BMS0360" },
+  { roll: "25BMS0361" },
+  { roll: "25BMS0363" },
+  { roll: "25BMS0365" },
+  { roll: "25BMS0366" },
+  { roll: "25BMS0367" },
+  { roll: "25BMS0370" }
 ];
 
 // Middleware
@@ -591,4 +629,5 @@ app.listen(PORT, () => {
   console.log(`Total students registered: ${students.length}`);
   console.log(`Total records for login: ${records.length}`);
 });
+
 
