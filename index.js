@@ -477,7 +477,17 @@ const students = [
 ];
 
 // Auto-generate records from students array
-const records = students.map(student => ({ roll: student.rollNumber }));
+const records = [
+    { roll: "25BMS0338" },
+    { roll: "25BMS0344" },
+    { roll: "25BMS0355" },
+    { roll: "25BMS0323" },
+    { roll: "25BMS0311" },
+    { roll: "25BMS0350" },
+    { roll: "25BMS0307" },
+    { roll: "25BMS0322" },
+    
+];
 
 // Middleware
 app.use(express.json());
@@ -581,3 +591,4 @@ app.listen(PORT, () => {
   console.log(`Total students registered: ${students.length}`);
   console.log(`Total records for login: ${records.length}`);
 });
+
